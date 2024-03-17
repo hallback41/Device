@@ -1,0 +1,377 @@
+html,
+body{
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Gilroy' ;
+    line-height: 24px;
+    color: black;
+    background-repeat: repeat;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src:url(fonts/gilroy/Gilroyextrabold.ttf)
+}
+
+@font-face {
+    font-family: 'Gilroy-light';
+    src:url(fonts/gilroy/Gilroylight.ttf)
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    list-style: none;
+}
+
+/* ACTIVE AND HOVER FOR LINKS */
+
+.hover__link:hover{
+    opacity: 0.6;
+}
+
+.active__link:active{
+    opacity: 0.3;
+}
+
+
+/* CATALOGUE-BAR */
+
+.dropdown-bar {
+    position: absolute;
+    display:none;
+    top: 130px;
+    left: -20px;
+    width: 1160px;
+    background-color: #f7e296f4;
+    margin: 0 20px;
+    z-index: 10;
+}
+
+.bar-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bar-wrapper ul{
+    margin: 50px 0 60px 60px;
+}
+
+.bar-wrapper li{
+    margin-top: 30px;
+}
+
+.bar-wrapper a{
+    font-family:'Gilroy-light' ;
+}
+
+.catalogue:hover .dropdown-bar{
+    display: block;
+
+}
+
+/* HEADER */
+
+.main-h1{
+    display: none;
+}
+
+.logo-01{
+    position: absolute;
+    top: 195px;
+    left: 955px;
+}
+
+.dash{
+    position: absolute;
+    top:225px ;
+    left: 620px;
+    width: 100px;
+    height: 8px;
+    background-color:white ;
+}
+
+.main-header{
+    position: relative;
+    width: 1200px;
+
+}
+
+/* logotip device */
+
+.main-logo{
+    position: absolute;
+    top: -20px;
+    left: 80px;
+    z-index: 10;
+}
+
+.main-logo:hover{
+    opacity: 0.6;
+}
+
+.main-logo:active{
+    opacity: 0.25;
+}
+
+/* navigation */
+
+.user-nav-wrapper{
+    width: 1160;
+    height: 300px;
+    margin:40px 20px 0 20px;
+    background-color: #f7e296 ;
+}
+
+.main-nav{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.user-navigation{
+    display: flex;
+    width: 521px;
+}
+
+/* BORDER HEADER ANIMATION */
+
+.border-element{
+    position: absolute;
+    top: 72px;
+    left: 90px;
+    width: 1px;
+    height: 2px;
+    background-color: black;
+    opacity: 0;
+}
+
+.border-element-left{
+    position: relative;
+    top: 28px;
+    left: 0;
+    width: 2px;
+    height: 45px;
+    background-color: none;
+}
+
+.border-element-right{
+    width: 2px;
+    height: 45px;
+    position: relative;
+    top: 28px;
+    left: 0px;
+}
+
+.border-element-top{
+    position: relative;
+    top: 28px;
+    left: 0px;
+    width: 83px;
+    height: 2px;
+    background-color: none;
+}
+
+.border-element-bottom{
+    position: absolute;
+    top: 72px;
+    left: 365px;
+    width: 0px;
+    height: 2px;
+    background-color: black;
+}
+
+/* SEARCH */
+
+.site-search{
+    width: 350px;
+    height: 30px;
+    margin-left: 90px;
+    margin-top: 44px;
+    background: none;
+    border: none;
+    outline:none;
+    font-family:"Gilroy-light" ;
+    font-size: 15px;
+    text-indent: 5px;
+}
+
+.site-search:focus ~ .border-element{
+    opacity: 1;
+    width: 353px;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-logo{
+    position: absolute;
+    top: 50px;
+    left: 62px;
+    width: 18px;
+    height: 18px;
+
+}
+
+.searcing__button{
+    width: 3px;
+    height: 46px;
+    margin-top: 28px;
+    font-family: "Gilroy-light";
+    color: white;
+    background-color: #f7e296 ;
+    border: none;
+    opacity: 0;
+}
+
+.site-search:focus ~ .border-element-bottom{
+    width: 83px;
+    transition: 0.2s;
+    transition-delay: 0.3s;
+}
+
+.border-element-right::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    left: -73px;
+    bottom: 0px;
+    width: 2px;
+    height: 0px;
+}
+
+.border-element-left::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    left: -71px;
+    bottom: 0px;
+    width: 2px;
+    height: 0px;
+}
+
+.site-search:focus ~ .border-element-left::before{
+    height: 45px;
+    transition: 0.2s;
+    transition-delay: 0.3s;
+}
+
+.site-search:focus ~ .border-element-right::before{
+    height: 45px;
+    transition: 0.2s;
+    transition-delay: 0.6s;
+}
+
+.border-element-top::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    left: -71px;
+    bottom: 0px;
+    width: 0px;
+    height: 2px;
+}
+
+.site-search:focus ~ .border-element-top::before{
+    width: 68px;
+    transition: 0.2s;
+    transition-delay: 0.6s;
+}
+
+.site-search:focus ~ .searcing__button{
+    transition-delay: 0s;
+    width: 83px;
+    opacity: 1;
+    background-color: transparent;
+    color: black;
+    border: none;
+    transition: 0.4s;
+}
+
+.user-navigation .searcing__button:hover{
+    color: white;
+    background-color: black;
+}
+
+
+.user-navigation .searcing__button:active{
+    width: 83px;
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.login {
+    position: relative;
+    margin-top: 45px;
+    margin-left: 78px;
+}
+
+.login__text{
+    padding-left: 9px;
+}
+
+.compare{
+    margin-top: 45px;
+    margin-left: 217px;
+}
+
+.compare__link{
+    position: relative;
+}
+
+.compare_image{
+    position: relative;
+    top: 5px;
+    left: 7px;
+}
+
+.basket{
+    margin-top: 46px;
+    margin-left: 48px;
+}
+
+.basket__img {
+    position: relative;
+    top: 4px;
+    left: 7px;
+}
+
+.navigation-wrapper{
+    display: flex;
+
+}
+
+.catalogue{
+    margin-top: 38px;
+    margin-left: 60px;
+}
+
+.catalogue-plus {
+    position: relative;
+    top: 2px;
+    left: 11px;
+}
+
+.delivery{
+    margin-top: 40px;
+    margin-left: 306px;
+}
+
+.guarantee{
+    margin-top: 38px;
+    margin-left: 37px;
+}
+
+.contacts{
+    margin-top: 38px;
+    margin-left: 115px;
+}
